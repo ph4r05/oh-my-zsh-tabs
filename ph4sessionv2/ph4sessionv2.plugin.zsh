@@ -114,7 +114,7 @@ if [ ${SHELL_SESSION_DID_INIT:-0} -eq 0 ] && [ -n "$TERM_SESSION_ID" ] && [ ! -e
 	# using it now; otherwise, we'll use the shared history until
 	# we've determined whether users have enabled/disabled this.
 	if [ -s "$SHELL_SESSION_HISTFILE" ]; then
-	    history -r "$SHELL_SESSION_HISTFILE"
+	    history -R "$SHELL_SESSION_HISTFILE"
 	    shell_session_history_enable
 	else
 	    # At the first prompt, check whether per-session history should
